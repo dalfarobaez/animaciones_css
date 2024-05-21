@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: cornflowerblue;
+}
+.ordenar {
+  grid-area: ordenar;
+  background-color: #4fe4b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenido{
+  grid-area: contenido;
+  background-color:aliceblue ;
+}
+.foot{
+  grid-area: foot;
+  background-color: #CF5F69;
+  color: aliceblue;
+  text-align: center;
+}
+.foot.a {
+  color: inherit;
+  text-decoration: none;
+}
+.items-ordenar{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.desplegable-contenedor {
+  width: 80%;
+}
+.desplegable{
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+}
+.navbar-nav {
+  flex-direction: column;
+}
+.cont-auto {
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.foto-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+.foto-logo:hover{
+  transform: rotate(360deg);
+}
+.fotos {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fotos:hover {
+  filter: grayscale();
+  width: 90%;
+}
+.boton {
+  background-color: #CF5F69;
+  color: aliceblue;
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 25px;
+  transition: width 1s ease;
+}
+.boton:hover{
+  background-color: #4fe4b2;
+  color: black;
+  width: 80%;
+}
+
+.contenedor-contenido {
+  display: flex;
+  flex-direction: column;
+}
+.paginacion {
+  display: flex;
+  justify-content: center;
+}
+.pagina {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 3px;
+  transition: padding 0.5s ease;
+}
+.pagina:hover{
+  background-color: #CF5F69;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 575px) {
+  .grid-mayor {
+    display: grid;
+    grid-template-areas:
+    "menu"
+    "ordenar"
+    "contenido"
+    "foot";
+    height: 100vh;
+    grid-template-rows: 8vh 8vh calc(100vh - 24vh) 8vh;
+  }
+  .icono {
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+
+  .contenedor-menu-azul {
+    display: grid;
+    grid-template-areas:
+    "titulo-logo menu_desplegable";
+    padding: 10px;
+  }
+  .menu_desplegable {
+    grid-area: menu_desplegable;
+  }
+
+  .contenedor-galeria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cont-auto{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .foto-auto:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .auto-extra {
+    visibility: hidden;
+    display: none;
+    max-height: 0px;
+    margin: 0;
+    padding: 0;
+  }
+  .titulo-logo {
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    gap: 10px;
+    grid-area: titulo-logo;
+  }
+  .contenedor-logo{
+    width: 10%;
+    border-radius:50%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+}
+
+
+/* Pantallas grandes */
+@media (min-width: 576px) {
+  .grid-mayor {
+    display: grid;
+    grid-template-areas:
+    "menu ordenar"
+    "menu contenido"
+    "menu contenido"
+    "menu contenido"
+    "menu contenido"
+    "menu contenido"
+    "menu contenido"
+    "menu contenido"
+    "menu contenido"
+    "menu contenido"
+    "foot contenido"
+    "foot contenido";
+    height: 100vh;
+    grid-template-columns: 20% 80%;
+  }
+  .icono {
+    margin: 5px;
+    font-size: 2rem;
+    color: aliceblue;
+  }
+  .contenedor-menu-azul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 15px;
+    gap: 15px;
+  }
+
+  .navbar .collapse {
+    display: flex !important;
+    flex-basis: auto !important;
+    flex-direction: column;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .contenedor-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cont-auto {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .foto-auto:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .titulo-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .contenedor-logo{
+    width: 50%;
+    border-radius:50%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+}
+.icono:hover{
+ color:#4fe4b2   
+}
