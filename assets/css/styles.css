@@ -18,6 +18,7 @@
 .contenido{
   grid-area: contenido;
   background-color:aliceblue ;
+  padding-bottom: 10px;
 }
 .foot{
   grid-area: foot;
@@ -114,24 +115,20 @@
 /* Pantallas pequeñas */
 @media (max-width: 575px) {
   .grid-mayor {
-    display: grid;
-    grid-template-areas:
-    "menu"
-    "ordenar"
-    "contenido"
-    "foot";
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    grid-template-rows: 8vh 8vh calc(100vh - 24vh) 8vh;
   }
   .icono {
     margin: 5px;
     font-size: 1.5rem;
+    color: aliceblue;
   }
 
   .contenedor-menu-azul {
-    display: grid;
-    grid-template-areas:
-    "titulo-logo menu_desplegable";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
   }
   .menu_desplegable {
@@ -165,12 +162,13 @@
   .titulo-logo {
     display: flex;
     justify-content: left;
-    align-items: top;
+    align-items: center;
     gap: 10px;
     grid-area: titulo-logo;
   }
   .contenedor-logo{
-    width: 10%;
+    width: 60px;
+    height: 60px;
     border-radius:50%;
     object-fit: cover;
     overflow: hidden;
